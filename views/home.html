@@ -1,0 +1,133 @@
+ <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/deep-purple.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Landing Page</h1>
+                        <span class="subheading">A Great Way to Kick Off Your Pretotyping</span>
+
+                        <br>
+
+                        <!-- Search bar --> 
+                        <div class="search">
+                            <span class="fa fa-search search_icon hidden-on-xs"></span>
+                            <input type="text" ng-model="searchText" class="search_input" placeholder="Search for stuff" />
+                        </div>
+                        <!-- End of search bar --> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of page header --> 
+
+    <!-- Main Content -->
+    <div id="main_content" class="lightgrey_background">       
+        <div class="container">
+            <div class="row">
+                
+                <!-- Sidebar Categories --> 
+                <div class="col-md-3 col-lg-2 col-lg-offset-1">
+                    <h4 class="sidebar_menu_list_headline">
+                        Popular
+                    </h4>
+                    <ul class="sidebar_menu_list">
+                        <li>
+                            <a ng-click="myFilter = {category: 'Tech'}" class="sidebar_menu_list_item">
+                                Tech
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = {category: 'Food'}" class="sidebar_menu_list_item">
+                                Food
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = {category: 'Retail'}" class="sidebar_menu_list_item">
+                                Retail
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = undefined" class="sidebar_menu_list_item">
+                                All
+                            </a>
+                        </li>
+                    </ul>
+
+                    <br>    
+
+                    <!-- Second Part of Sidebar Categories --> 
+                    <h4 class="sidebar_menu_list_headline">
+                        Categories
+                    </h4>
+                    <ul class="sidebar_menu_list">
+                        <li>
+                            <a ng-click="myFilter = {category: 'Tech'}" class="sidebar_menu_list_item">
+                                Tech
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = {category: 'Manufacturing'}" class="sidebar_menu_list_item">
+                                Manufacturing
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = {category: 'Advertising'}" class="sidebar_menu_list_item">
+                                Advertising
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = {category: 'Retail'}" class="sidebar_menu_list_item">
+                                Retail
+                            </a>
+                        </li>
+                         <li>
+                            <a ng-click="myFilter = {category: 'Food'}" class="sidebar_menu_list_item">
+                                Food
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="myFilter = {category: 'Law'}" class="sidebar_menu_list_item">
+                                Law
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="myFilter = {category: 'Media'}" class="sidebar_menu_list_item">
+                                Media
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="myFilter = {category: 'Transport'}" class="sidebar_menu_list_item">
+                                Transportation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Card Components --> 
+                <div class="col-md-9 col-lg-9">
+                    <div class="row">
+
+                        <!-- Card Component is repeated for every item in the data.json file --> 
+                        <div class="col-md-4 margin_bottom" ng-repeat="item in items | filter:searchText | filter:myFilter">
+                            <a ng-href="#!/items/{{ item.id }}" class="flex_third featured_app_row">
+                                <div class="large_app_card">
+                                    <div class="featured_app text-center" style="background-image: url('{{ item.imgpath }}')"></div>
+                                    <div class="card_text_area">
+                                        <div class="card_headline">{{ item.title }}</div>
+                                        <div>
+                                            <div class="card_text">{{ item.description }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

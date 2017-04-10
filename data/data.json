@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "category": "Tech",
+    "title": "Wild Tech App",
+    "description": "Try it out.",
+    "imgpath": "img/items/nature.jpeg"
+  },
+  {
+    "id": 1,
+    "category": "Food",
+    "title": "Classic Dish",
+    "description": "Taste it all.",
+    "imgpath": "img/items/food.jpg"
+  },
+  {
+    "id": 2,
+    "category": "Retail",
+    "title": "Cool Clothing Brand",
+    "description": "See the goods.",
+    "imgpath": "img/items/clothes.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Transport",
+    "title": "Robust Truck",
+    "description": "Drive with style.",
+    "imgpath": "img/items/truck.jpeg"
+  },
+  {
+    "id": 4,
+    "category": "Ad",
+    "title": "Nice ad",
+    "description": "Check the latest.",
+    "imgpath": "img/items/ad.jpg"
+  },
+  {
+    "id": 5,
+    "category": "News",
+    "title": "News Story",
+    "description": "Check it out.",
+    "imgpath": "img/items/news.jpg"
+  }
+]
